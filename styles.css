@@ -32,7 +32,7 @@ body {
     transition: background-color 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hover effect for the button */
+/* Hover effect for the Twitter button */
 .twitter-login:hover {
     filter: brightness(1.2); /* Makes the button appear slightly brighter */
 }
@@ -40,5 +40,30 @@ body {
 /* Focus style for accessibility */
 .twitter-login:focus {
     outline: 2px solid #0d8bd7;
+    outline-offset: 2px;
+}
+
+/* Style the Github login button */
+.github-login {
+    background-color: #333; /* GitHub dark color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+    margin-top: 10px; /* Space between the buttons */
+}
+
+/* Hover effect for the Github button */
+.github-login:hover {
+    filter: brightness(1.2); /* Makes the button appear slightly brighter */
+}
+
+/* Focus style for accessibility */
+.github-login:focus {
+    outline: 2px solid #24292e;
     outline-offset: 2px;
 }
