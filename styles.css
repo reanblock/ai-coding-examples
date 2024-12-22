@@ -9,12 +9,15 @@ body {
     background-color: #f5f8fa; /* Twitter-like background */
 }
 
-/* Center the content on the page */
+/* Center the content on the page and stack items vertically */
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-/* Add vertical space above the button */
+/* Add vertical space above the buttons */
 .spacer {
     height: 100px;
 }
