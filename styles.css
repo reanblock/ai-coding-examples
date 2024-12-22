@@ -62,7 +62,9 @@ body {
 
 /* Hover effect for the Github button */
 .github-login:hover {
-    filter: brightness(1.2); /* Makes the button appear slightly brighter */
+    background-color: #444; /* Makes the GitHub button slightly brighter on hover */
+    /* Optional: You can keep the filter if desired */
+    /* filter: brightness(1.1); */
 }
 
 /* Focus style for accessibility */
