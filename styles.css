@@ -1,0 +1,44 @@
+/* Basic reset for the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f8fa; /* Twitter-like background */
+}
+
+/* Center the content on the page */
+.container {
+    text-align: center;
+}
+
+/* Add vertical space above the button */
+.spacer {
+    height: 100px;
+}
+
+/* Style the Twitter login button */
+.twitter-login {
+    background-color: #1da1f2; /* Twitter blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the button */
+.twitter-login:hover {
+    filter: brightness(1.2); /* Makes the button appear slightly brighter */
+}
+
+/* Focus style for accessibility */
+.twitter-login:focus {
+    outline: 2px solid #0d8bd7;
+    outline-offset: 2px;
+}
