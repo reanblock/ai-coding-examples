@@ -16,12 +16,57 @@
         </section>
         <button class="twitter-login">Login with Twitter</button>
         <button class="github-login">Login with GitHub</button>
+        <!-- New 3D Charts Section -->
+        <section class="charts">
+            <h2>Interactive 3D Data Visualization</h2>
+            <div id="my-3d-chart" style="width: 100%; height: 500px;"></div>
+        </section>
+        
+        <!-- Footer -->
         <footer>
             <p>© <span id="current-year"></span> DevZep LTD</p>
         </footer>
     </div>
+    
+    <!-- Existing Current Year Script -->
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Add Plotly.js Library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- Initialize 3D Chart -->
+    <script>
+        // Sample 3D Scatter Plot Data
+        var trace1 = {
+            x: [1, 2, 3, 4, 5],
+            y: [2, 3, 4, 5, 6],
+            z: [10, 15, 13, 17, 21],
+            mode: 'markers',
+            marker: {
+                size: 12,
+                line: {
+                    color: 'rgba(217, 217, 217, 0.14)',
+                    width: 0.5
+                },
+                opacity: 0.8
+            },
+            type: 'scatter3d'
+        };
+
+        var data = [trace1];
+
+        var layout = {
+            margin: {
+                l: 0,
+                r: 0,
+                b: 0,
+                t: 0
+            }
+        };
+
+        Plotly.newPlot('my-3d-chart', data, layout);
     </script>
 </body>
 </html>

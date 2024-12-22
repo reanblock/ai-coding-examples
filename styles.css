@@ -9,6 +9,23 @@ body {
     background-color: #ffe5b4; /* Warm background */
 }
 
+/* 3D Charts Section Styling */
+.charts {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.charts h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#my-3d-chart {
+    width: 100%;
+    height: 500px;
+}
+
 /* Center the content on the page and stack items vertically */
 .container {
     display: flex;
