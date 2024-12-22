@@ -1,13 +1,16 @@
-# AI Project
+# AI Generated Project
 
-python -m pip install aider-install
-aider-install
+All done using GPT 
 
-# Change directory into your code base
-cd /to/your/project
 
-# Work with Claude 3.5 Sonnet on your code
-aider --model sonnet --anthropic-api-key your-key-goes-here
+## Install 
 
-# Work with GPT-4o on your code
-aider --o1-mini --openai-api-key your-key-goes-here
+```
+python3 -m pip install aider-install
+
+python3 -m pip show aider-install
+
+~/Library/Python/3.9/bin/aider-install
+
+aider --model gpt-4o --openai-api-key
+```
