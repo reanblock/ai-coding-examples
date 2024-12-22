@@ -12,6 +12,12 @@
         <div class="spacer"></div>
         <button class="twitter-login">Login with Twitter</button>
         <button class="github-login">Login with GitHub</button>
+        <footer>
+            <p>© <span id="current-year"></span> DevZep LTD</p>
+        </footer>
     </div>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
