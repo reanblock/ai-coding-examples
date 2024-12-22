@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f8fa; /* Twitter-like background */
+    background-color: #ffe5b4; /* Warm background */
 }
 
 /* Center the content on the page and stack items vertically */
@@ -15,6 +15,31 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #666;
 }
 
 /* Add vertical space above the buttons */
