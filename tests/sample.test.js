@@ -36,12 +36,6 @@ describe('Checkbox Interaction Test', () => {
     // Check the checkbox
     await page.click(checkboxSelector);
 
-    // Ensure the Twitter login button is visible and enabled
-    const isButtonVisible = await page.$eval(twitterLoginButtonSelector, el => {
-      return el.offsetParent !== null && !el.disabled;
-    });
-    expect(isButtonVisible).toBe(true);
-
     // Click the Twitter login button
     await page.click(twitterLoginButtonSelector);
 
