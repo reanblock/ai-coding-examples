@@ -33,9 +33,6 @@ describe('Checkbox Interaction Test', () => {
     const welcomeMessageSelector = '#welcome-message';
     const twitterLoginButtonSelector = '.twitter-login';
 
-    // Wait for the script to be ready
-    // await page.waitForSelector(twitterLoginButtonSelector);
-
     // Check the checkbox
     await page.click(checkboxSelector);
 
@@ -45,19 +42,20 @@ describe('Checkbox Interaction Test', () => {
     await page.screenshot({ path: 'screenshot-login.png' });
 
     // Verify the welcome message is displayed
-    const isVisible = await page.$eval(welcomeMessageSelector, el => {
-      const style = window.getComputedStyle(el);
-      return style && style.display !== 'none';
-    });
+    const isVisible = await page.$eval(welcomeMessageSelector, el => el.style.display !== 'none');
     expect(isVisible).toBe(true);
   });
 
   test('should hide welcome message when checkbox is unchecked', async () => {
     const checkboxSelector = '#welcome-checkbox';
     const welcomeMessageSelector = '#welcome-message';
+    const twitterLoginButtonSelector = '.twitter-login';
 
     // Uncheck the checkbox
     await page.click(checkboxSelector);
+
+    // Click the Twitter login button
+    await page.click(twitterLoginButtonSelector);
 
     // Verify the welcome message is hidden
     const isVisible = await page.$eval(welcomeMessageSelector, el => el.style.display === 'none');
