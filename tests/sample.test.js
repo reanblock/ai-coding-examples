@@ -1,12 +1,24 @@
 const puppeteer = require('puppeteer');
 const path = require('path');
 
+describe('Google', () => {
+  beforeAll(async () => {
+    await page.goto('https://google.com');
+  });
+
+  it('should be titled "Google"', async () => {
+    await page.screenshot({ path: 'screenshot-google.png' });
+    await expect(page.title()).resolves.toMatch('Google');
+  });
+});
+
+
 describe('Checkbox Interaction Test', () => {
   let browser;
   let page;
 
   beforeAll(async () => {
-    browser = await puppeteer.launch();
+    browser = await puppeteer.launch({ headless: true });
     page = await browser.newPage();
     const filePath = `file:${path.join(__dirname, '../index.html')}`;
     await page.goto(filePath);
@@ -19,9 +31,15 @@ describe('Checkbox Interaction Test', () => {
   test('should display welcome message when checkbox is checked', async () => {
     const checkboxSelector = '#welcome-checkbox';
     const welcomeMessageSelector = '#welcome-message';
+    const twitterLoginButtonSelector = '.twitter-login';
 
-    // Check the checkbox
-    await page.click(checkboxSelector);
+     // Check the checkbox
+     await page.click(checkboxSelector);
+
+     // Click the Twitter login button
+     await page.click(twitterLoginButtonSelector);
+
+     await page.screenshot({ path: 'screenshot-login.png' });
 
     // Verify the welcome message is displayed
     const isVisible = await page.$eval(welcomeMessageSelector, el => el.style.display !== 'none');
