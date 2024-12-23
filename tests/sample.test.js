@@ -45,7 +45,10 @@ describe('Checkbox Interaction Test', () => {
     await page.screenshot({ path: 'screenshot-login.png' });
 
     // Verify the welcome message is displayed
-    const isVisible = await page.$eval(welcomeMessageSelector, el => el.style.display !== 'none');
+    const isVisible = await page.$eval(welcomeMessageSelector, el => {
+      const style = window.getComputedStyle(el);
+      return style && style.display !== 'none';
+    });
     expect(isVisible).toBe(true);
   });
 
