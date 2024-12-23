@@ -33,13 +33,19 @@ describe('Checkbox Interaction Test', () => {
     const welcomeMessageSelector = '#welcome-message';
     const twitterLoginButtonSelector = '.twitter-login';
 
-     // Check the checkbox
-     await page.click(checkboxSelector);
+    // Check the checkbox
+    await page.click(checkboxSelector);
 
-     // Click the Twitter login button
-     await page.click(twitterLoginButtonSelector);
+    // Ensure the Twitter login button is visible and enabled
+    const isButtonVisible = await page.$eval(twitterLoginButtonSelector, el => {
+      return el.offsetParent !== null && !el.disabled;
+    });
+    expect(isButtonVisible).toBe(true);
 
-     await page.screenshot({ path: 'screenshot-login.png' });
+    // Click the Twitter login button
+    await page.click(twitterLoginButtonSelector);
+
+    await page.screenshot({ path: 'screenshot-login.png' });
 
     // Verify the welcome message is displayed
     const isVisible = await page.$eval(welcomeMessageSelector, el => el.style.display !== 'none');
