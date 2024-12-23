@@ -1,9 +1,10 @@
 # AI Generated Project
 
-All done using GPT 
-
+All done using GPT 4o and 4o-mini.
 
 ## Install 
+
+How to [install Aider](https://aider.chat/docs/install.html) on Mac:
 
 ```
 python3 -m pip install aider-install
