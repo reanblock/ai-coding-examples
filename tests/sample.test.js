@@ -7,7 +7,7 @@ describe('Google', () => {
   });
 
   it('should be titled "Google"', async () => {
-    await page.screenshot({ path: 'screenshot-google.png' });
+    // await page.screenshot({ path: 'screenshot-google.png' });
     await expect(page.title()).resolves.toMatch('Google');
   });
 });
@@ -34,7 +34,7 @@ describe('Checkbox Interaction Test', () => {
     const twitterLoginButtonSelector = '.twitter-login';
 
     // Wait for the script to be ready
-    await page.waitForSelector(twitterLoginButtonSelector);
+    // await page.waitForSelector(twitterLoginButtonSelector);
 
     // Check the checkbox
     await page.click(checkboxSelector);
