@@ -21,7 +21,7 @@ describe('Checkbox Interaction Test', () => {
     browser = await puppeteer.launch({ headless: true });
     page = await browser.newPage();
     const filePath = `file:${path.join(__dirname, '../index.html')}`;
-    await page.goto(filePath);
+    await page.goto(filePath, { waitUntil: 'domcontentloaded' });
   });
 
   afterAll(async () => {
@@ -32,6 +32,9 @@ describe('Checkbox Interaction Test', () => {
     const checkboxSelector = '#welcome-checkbox';
     const welcomeMessageSelector = '#welcome-message';
     const twitterLoginButtonSelector = '.twitter-login';
+
+    // Wait for the script to be ready
+    await page.waitForSelector(twitterLoginButtonSelector);
 
     // Check the checkbox
     await page.click(checkboxSelector);
