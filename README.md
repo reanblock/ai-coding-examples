@@ -85,6 +85,8 @@ TYPE
 FILE
 DEFAULT
 
+**NOTE**: it is important to structure promots with the IDKs including: **location**, **action** and **detail**. See [Example 8](#example-8-add-an-output-flag-to-support-json-markdown-or-text) for an example of this.
+
 # Prompt Examples
 
 ## Example 1: Simple Hello World
@@ -213,6 +215,8 @@ add keywords: str[] to `TranscriptAnalysis`. update `main` pass in and use `word
 
 Starting point is state at the end of the previous example.
 Requirement is to be able to save the output to a specific external file. Supported types are json, markdown or text. Add to the cli arguments list.
+
+**NOTE** in these examples now how the prompt is structed with the IDKs including: **location**, **action** and **detail**.
 
 ```
 /add src/transcript_analytics/main.py src/transcript_analytics/data_types.py src/transcript_analytics/arg_parse.py 
