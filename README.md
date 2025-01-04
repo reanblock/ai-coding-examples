@@ -73,6 +73,7 @@ Make use of the [aider.conf.yml](./aider.conf.yml) file in your project to set d
 - `file`: set the file(s) you want aider to automatically add to the context
 - `read`: set the READ ONLY file(s) you want aider to automatically add to the context.
 - `suggest-shell-commands`: set to `false` so that aider does not suggest commands to run
+- `auto_commits`: set to `false` to prevent aider from automatically committing after each code change. This allows you to have more control over what changes are added and how the commit message will be formated.
 - `test-cmd`: add the cmd to run tests for your project so that aider can run them
 - `auto-test`: set to `true` so that aider will automatically run tests (using the command specified in `test-cmd`), after each code change.
 - `voice-*`: to enable and confiure voice support in aider
