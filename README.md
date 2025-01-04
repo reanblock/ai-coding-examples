@@ -63,6 +63,20 @@ Using GPT ol Preview as the Architect and Claude 3.5 Sonnet as the Editor
 ```bash
 aider --model openrouter/openai/ol-preview --architect --editor-model openrouter/anthropic/claude-3.5-sonnet
 ```
+
+## Aider Conf
+
+Make use of the [aider.conf.yml](./aider.conf.yml) file in your project to set defaults. Some useful settings are:
+
+- `openai-api-key`: set your openai API key 
+- `model`: set the defualt model to use when aider boots up
+- `file`: set the file(s) you want aider to automatically add to the context
+- `read`: set the READ ONLY file(s) you want aider to automatically add to the context.
+- `suggest-shell-commands`: set to `false` so that aider does not suggest commands to run
+- `test-cmd`: add the cmd to run tests for your project so that aider can run them
+- `auto-test`: set to `true` so that aider will automatically run tests (using the command specified in `test-cmd`), after each code change.
+- `voice-*`: to enable and confiure voice support in aider
+ 
 # Prompt IDKs - Information Dense Keywords
 
 Prompts are made up of individual keywords. Some keywords contain more meaning than others. Here are a list of useful IDKs:
