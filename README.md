@@ -102,6 +102,10 @@ DEFAULT
 
 **NOTE**: it is important to structure promots with the IDKs including: **location**, **action** and **detail**. See [Example 8](#example-8-add-an-output-flag-to-support-json-markdown-or-text) for an example of this.
 
+# Meta Prompting
+
+Here are [some examples](https://gist.github.com/disler/29ff18823670098c26fa370ad802fa96).
+
 # Prompt Examples
 
 ## Example 1: Simple Hello World
