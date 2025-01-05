@@ -108,6 +108,8 @@ Here are [some examples](https://gist.github.com/disler/29ff18823670098c26fa370a
 
 # Prompt Examples
 
+Recommend reading [Prompt Engineering Guide](https://www.promptingguide.ai/) and then follow through these examples:
+
 ## Example 1: Simple Hello World
 
 Starting point is an empty `main.py` file in a basic Python `uv` project.
